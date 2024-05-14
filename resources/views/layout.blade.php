@@ -28,6 +28,7 @@
             <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto ">
                 <a class="me-3 p-2 link-body-emphasis text-decoration-none text-white" href="/"> Главная </a>
                 <a class="me-3 p-2 link-body-emphasis text-decoration-none text-white" href="/about"> Про нас </a>
+                <a class="me-3 p-2 link-body-emphasis text-decoration-none text-white" href="/posts"> Статья </a>
                 <a class="p-2 link-body-emphasis text-decoration-none text-white" href="/product"> Продукт </a>
                 <a class="p-2 link-body-emphasis text-decoration-none text-white" href="/review"> Отзывы </a>
 

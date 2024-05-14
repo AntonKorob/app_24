@@ -14,6 +14,7 @@
     <?php
     // Запрос данных в БД и вывод их на странице. Выборка по id
     $news = DB::select('SELECT * FROM contacts');
+    // $posts = DB::select('SELECT * FROM posts ORDER BY DESC'); 
     
     //Перебор в цикле всех статей и названий из БД
     foreach($news as $val):?>
@@ -22,10 +23,18 @@
         <br><?=$val->text;?><br>
         <p>Автор : <?php $val->email;?></p>
 
-        <!-- //form delete_all -->
-        <form action="/delete_all" method="get">
-            <button class="btn btn-danger opacity-50" type="submit">Delete</button>
-        </form>
+        <!-- //form has delete one-->
+        <div class="delete_main d-flex p-2 m-2">
+            <form action="/posts/delete" method="get" class="p-2 mp-2">
+                <button class="btn btn-danger opacity-50 " type="submit">Delete </button>
+            </form>
+
+            <!-- //form has delete_all -->
+
+            <form action="/delete_all" method="get" class="p-2 mp-2">
+                <button class="btn btn-danger opacity-50" type="submit">Delete all</button>
+            </form>
+        </div>
     </div>
 
     <?php endforeach;?>

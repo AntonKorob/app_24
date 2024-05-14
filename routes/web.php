@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\MyFirstController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,6 +43,16 @@ Route::get('/user', [MainController::class, 'user']);
 
 //Страница с продуктом
 Route::get('/product', [MainController::class, 'product']);
+
+//Страница с постами
+Route::get('/posts', [MyFirstController::class, 'getPosts']);
+
+// Route::get('/posts', [MyFirstController::class, 'index']);
+
+Route::get('/posts/create', [MyFirstController::class, 'create']);
+Route::get('/posts/update', [MyFirstController::class, 'update']);
+Route::get('/posts/delete', [MyFirstController::class, 'delete']);
+
 
 //Страница с авторизацией
 Route::get('/dashboard', function () {
